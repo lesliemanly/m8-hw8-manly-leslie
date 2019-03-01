@@ -8,6 +8,29 @@
   text-transform: uppercase;
   font-family: sans-serif;
   list-style-type: none;
+  transition-duration: 0.5s;
+}
+li:hover {
+  cursor: pointer;
+}
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  display: none;
+}
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  width: 33%;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
 }
 .main-menu-labels {
   margin: 0;
